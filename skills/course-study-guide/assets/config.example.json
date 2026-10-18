@@ -1,0 +1,20 @@
+{
+  "mode": "learner",
+  "grade": "",
+  "subject": "",
+  "curriculum": "",
+  "lesson_minutes": 40,
+  "languages": ["zh", "en"],
+  "question_plan": {
+    "foundation_count": 2,
+    "mother_count": 1,
+    "variants_per_mother": 3,
+    "include_uploaded": "all",
+    "difficulty_targets": [1, 2, 3],
+    "order": "progressive"
+  },
+  "mock_count": 2,
+  "modules": ["knowledge", "practice", "solutions", "retrieval", "mastery", "glossary", "answer_templates", "assessment_table"],
+  "formats": ["pdf", "html"],
+  "knowledge_base": {"root": "./knowledge-base", "auto_sync": true}
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "递进式学案与教师备课"
+  short_description: "面向自学者与中小学教师，按可调母题和变式数量生成学案、教案及题目评价"
+  default_prompt: "使用 $course-study-guide，根据我的资料或上传母题，按学习者/教师模式、语言、母题数和变式数生成递进式学习材料，附解答、预估难度与知识维度，并更新本地知识库。"

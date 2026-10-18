@@ -1,0 +1,584 @@
+{
+  "schema_version": 2,
+  "course": {
+    "zh": "小学长方形周长·合成示例"
+  },
+  "settings": {
+    "mode": "teacher",
+    "grade": "小学四年级",
+    "languages": [
+      "zh"
+    ],
+    "mock_count": 0,
+    "modules": [
+      "knowledge",
+      "practice",
+      "solutions",
+      "retrieval",
+      "mastery",
+      "glossary",
+      "lesson_plan",
+      "assessment_table"
+    ],
+    "question_plan": {
+      "foundation_count": 2,
+      "mother_count": 1,
+      "variants_per_mother": 3,
+      "include_uploaded": "all",
+      "order": "progressive"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-0ae3b7b67d21b773",
+      "file": "examples/knowledge-base/perimeter.md",
+      "kind": "original synthetic teaching note"
+    }
+  ],
+  "coverage": [
+    {
+      "topic": {
+        "zh": "周长、逆向求边、入口条件与面积辨析"
+      },
+      "status": "covered",
+      "unit_ids": [
+        "U-PERIMETER"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "U-PERIMETER",
+      "title": {
+        "zh": "长方形周长"
+      },
+      "scope": "core",
+      "prerequisites": [],
+      "refs": [
+        {
+          "source_id": "SRC-0ae3b7b67d21b773",
+          "locator": "周长定义与母题段落"
+        }
+      ],
+      "goal": {
+        "zh": "能解释周长、求长方形周长，并区分完整周长和实际围栏长度。"
+      },
+      "intuition": {
+        "zh": "用手指沿花坛四边走一圈，把四条边的长度加起来。"
+      },
+      "principles": {
+        "zh": "对边分别相等，所以周长=长+宽+长+宽=(长+宽)×2。所有长度先统一单位。周长使用长度单位，面积使用面积单位。"
+      },
+      "demonstration": {
+        "zh": "长2厘米、宽1厘米的小长方形，沿边数得2+1+2+1=6厘米；也可先算2+1再乘2。"
+      },
+      "method": [
+        {
+          "zh": "明确是求完整边界、实际用料还是未知边。"
+        },
+        {
+          "zh": "画草图标已知信息，选择周长关系并计算。"
+        },
+        {
+          "zh": "用四边相加、补回入口或代回周长核验。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "zh": "不把长乘宽当作周长。"
+        },
+        {
+          "zh": "有入口时先算完整周长再扣除入口；同时核查入口是否重复扣除。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "U-PERIMETER-F1",
+          "level": 1,
+          "kind": "recognition",
+          "role": "foundation",
+          "origin": {
+            "type": "original",
+            "refs": []
+          },
+          "prompt": {
+            "zh": "用自己的话解释长方形的周长。它和面积描述的是同一件事吗？"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "周长是沿图形边界走一周的总长度。"
+              },
+              {
+                "zh": "面积描述内部区域的大小，和边界总长度不同。"
+              }
+            ],
+            "conclusion": {
+              "zh": "周长是边界总长度，不是面积。"
+            },
+            "check": {
+              "zh": "沿四条边描一圈，没有填满内部区域。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 1,
+              "reasoning": 1,
+              "abstraction": 1,
+              "transfer": 1,
+              "representation": 1
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "只需识别边界长度与内部区域的区别。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "只需识别边界长度与内部区域的区别。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "concept",
+                "evidence": "只需识别边界长度与内部区域的区别。"
+              }
+            ],
+            "cognitive_processes": [
+              "understand",
+              "apply"
+            ]
+          }
+        },
+        {
+          "id": "U-PERIMETER-F2",
+          "level": 2,
+          "kind": "application",
+          "role": "foundation",
+          "origin": {
+            "type": "original",
+            "refs": []
+          },
+          "prompt": {
+            "zh": "长方形长4厘米、宽3厘米，求周长。"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "相邻两条边长度之和为4+3=7厘米。"
+              },
+              {
+                "zh": "两组这样的边合起来为7×2=14厘米。"
+              }
+            ],
+            "conclusion": {
+              "zh": "14厘米。"
+            },
+            "check": {
+              "zh": "4+3+4+3=14厘米，与计算一致。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 1,
+              "reasoning": 2,
+              "abstraction": 1,
+              "transfer": 1,
+              "representation": 1
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "直接使用已学关系，完成两步简单计算。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "直接使用已学关系，完成两步简单计算。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "procedure",
+                "evidence": "直接使用已学关系，完成两步简单计算。"
+              }
+            ],
+            "cognitive_processes": [
+              "understand",
+              "apply"
+            ]
+          }
+        },
+        {
+          "id": "U-PERIMETER-M1",
+          "level": 2,
+          "kind": "canonical",
+          "role": "mother",
+          "origin": {
+            "type": "quoted",
+            "refs": [
+              {
+                "source_id": "SRC-0ae3b7b67d21b773",
+                "locator": "母题段落"
+              }
+            ]
+          },
+          "prompt": {
+            "zh": "长方形花坛长8米、宽5米，沿四边围一圈。没有出入口，忽略围栏厚度，需要多少米围栏？"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "围栏覆盖四条边，所求等于花坛周长。"
+              },
+              {
+                "zh": "8+5=13米，13×2=26米。"
+              }
+            ],
+            "conclusion": {
+              "zh": "需要26米围栏。"
+            },
+            "check": {
+              "zh": "8+5+8+5=26米；单位为米。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 1,
+              "reasoning": 2,
+              "abstraction": 1,
+              "transfer": 2,
+              "representation": 1
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "从花坛围栏情景识别周长模型并计算。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "从花坛围栏情景识别周长模型并计算。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "concept",
+                "evidence": "从花坛围栏情景识别周长模型并计算。"
+              },
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "procedure",
+                "evidence": "从花坛围栏情景识别周长模型并计算。"
+              }
+            ],
+            "cognitive_processes": [
+              "understand",
+              "apply"
+            ]
+          },
+          "uploaded": true
+        },
+        {
+          "id": "U-PERIMETER-V1",
+          "level": 3,
+          "kind": "variation",
+          "role": "variant",
+          "origin": {
+            "type": "original",
+            "refs": []
+          },
+          "prompt": {
+            "zh": "同一个长8米、宽5米的花坛，四边围栏中留出2米宽的入口，其余部分围满。忽略围栏厚度，实际需多少米围栏？"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "完整边界的周长仍为(8+5)×2=26米。"
+              },
+              {
+                "zh": "入口不装围栏，实际长度为26−2=24米。"
+              }
+            ],
+            "conclusion": {
+              "zh": "实际需24米围栏。"
+            },
+            "check": {
+              "zh": "24+2=26米，补回入口恰好是完整周长。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 2,
+              "reasoning": 3,
+              "abstraction": 2,
+              "transfer": 3,
+              "representation": 2
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "需区分完整周长与实际用料，不能把周长公式结果直接作为答案。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "需区分完整周长与实际用料，不能把周长公式结果直接作为答案。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "application",
+                "evidence": "需区分完整周长与实际用料，不能把周长公式结果直接作为答案。"
+              },
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "reasoning",
+                "evidence": "需区分完整周长与实际用料，不能把周长公式结果直接作为答案。"
+              }
+            ],
+            "cognitive_processes": [
+              "analyze",
+              "evaluate"
+            ]
+          },
+          "mother_id": "U-PERIMETER-M1",
+          "transformation": {
+            "type": "condition",
+            "invariants": "长8米、宽5米，周长关系不变。",
+            "changes": "新增2米入口，所求变为实际用料。",
+            "purpose": "判断周长与实际围栏长度的关系。"
+          }
+        },
+        {
+          "id": "U-PERIMETER-V2",
+          "level": 3,
+          "kind": "variation",
+          "role": "variant",
+          "origin": {
+            "type": "original",
+            "refs": []
+          },
+          "prompt": {
+            "zh": "另一个长方形花坛的周长是30米，长为9米，宽为多少米？"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "长与宽的和是周长的一半，即30÷2=15米。"
+              },
+              {
+                "zh": "宽为15−9=6米。"
+              }
+            ],
+            "conclusion": {
+              "zh": "宽为6米。"
+            },
+            "check": {
+              "zh": "(9+6)×2=30米，且6米小于长9米。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 2,
+              "reasoning": 3,
+              "abstraction": 2,
+              "transfer": 3,
+              "representation": 3
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "已知量与目标互换，需先还原半周长，再求未知边。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "已知量与目标互换，需先还原半周长，再求未知边。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "procedure",
+                "evidence": "已知量与目标互换，需先还原半周长，再求未知边。"
+              },
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "reasoning",
+                "evidence": "已知量与目标互换，需先还原半周长，再求未知边。"
+              }
+            ],
+            "cognitive_processes": [
+              "analyze",
+              "evaluate"
+            ]
+          },
+          "mother_id": "U-PERIMETER-M1",
+          "transformation": {
+            "type": "inverse",
+            "invariants": "长方形周长等于两倍长宽之和。",
+            "changes": "给周长30米与长9米，改求宽。",
+            "purpose": "训练从周长逆推未知边。"
+          }
+        },
+        {
+          "id": "U-PERIMETER-V3",
+          "level": 4,
+          "kind": "transfer",
+          "role": "variant",
+          "origin": {
+            "type": "original",
+            "refs": []
+          },
+          "prompt": {
+            "zh": "小明说：长8米、宽5米的花坛，围栏长度是8×5=40米。指出错误，并给出没有入口时的正确围栏长度。"
+          },
+          "answer": {
+            "steps": [
+              {
+                "zh": "8×5计算的是长方形面积，应使用平方米，不能当作边界长度。"
+              },
+              {
+                "zh": "围栏沿四边，应算(8+5)×2=26米。"
+              }
+            ],
+            "conclusion": {
+              "zh": "把面积和周长混淆了；正确围栏长度是26米。"
+            },
+            "check": {
+              "zh": "四边相加为26米；40平方米与26米描述不同的量。"
+            }
+          },
+          "assessment": {
+            "status": "estimated",
+            "audience": "已学长方形周长的小学四年级学习者；非课标认证",
+            "ratings": {
+              "prerequisites": 2,
+              "reasoning": 3,
+              "abstraction": 3,
+              "transfer": 3,
+              "representation": 2
+            },
+            "evidence": {
+              "prerequisites": "已学长方形对边相等、周长及同单位长度相加。",
+              "reasoning": "需要评价他人解法，辨别所求量和单位，再修正模型。",
+              "abstraction": "用具体花坛与边界长度解释关系，不引入代数方程。",
+              "transfer": "以课堂母题为参照，判断变化条件与所求量。",
+              "representation": "信息由短文字给出，可借助长方形草图核查。"
+            },
+            "confidence": 0.8,
+            "rationale": "需要评价他人解法，辨别所求量和单位，再修正模型。",
+            "knowledge_dimensions": [
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "concept",
+                "evidence": "需要评价他人解法，辨别所求量和单位，再修正模型。"
+              },
+              {
+                "unit_id": "U-PERIMETER",
+                "aspect": "reasoning",
+                "evidence": "需要评价他人解法，辨别所求量和单位，再修正模型。"
+              }
+            ],
+            "cognitive_processes": [
+              "analyze",
+              "evaluate"
+            ]
+          },
+          "mother_id": "U-PERIMETER-M1",
+          "transformation": {
+            "type": "error_diagnosis",
+            "invariants": "仍求无入口花坛的边界长度。",
+            "changes": "加入把面积当周长的错误解法。",
+            "purpose": "区分概念、判断单位并修正推理。"
+          }
+        }
+      ]
+    }
+  ],
+  "mocks": [],
+  "routes": [
+    {
+      "id": "ROUTE-FENCE",
+      "keywords": {
+        "zh": [
+          "围栏",
+          "围一圈",
+          "入口",
+          "周长"
+        ]
+      },
+      "family": {
+        "zh": "边界长度与实际用料"
+      },
+      "distinguish": {
+        "zh": "确认是否留入口，所求是完整周长还是实际围栏。"
+      },
+      "first_step": {
+        "zh": "画出长方形并标记入口，再决定是否从周长中扣除。"
+      },
+      "targets": [
+        "U-PERIMETER",
+        "U-PERIMETER-M1",
+        "U-PERIMETER-V1-ANS"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": {
+        "zh": "周长"
+      },
+      "definition": {
+        "zh": "沿图形边界走一周的总长度。"
+      },
+      "unit_ids": [
+        "U-PERIMETER"
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "unit_id": "U-PERIMETER",
+      "criteria": [
+        {
+          "zh": "能解释周长、求长方形周长，并区分完整周长和实际围栏长度。"
+        },
+        {
+          "zh": "能说明母题与有入口变式的差别，并完成V1和V2。"
+        }
+      ]
+    }
+  ],
+  "lesson_plan": {
+    "minutes": 40,
+    "stages": [
+      {
+        "name": "前测与导入",
+        "minutes": 5
+      },
+      {
+        "name": "描边探索与概念",
+        "minutes": 10
+      },
+      {
+        "name": "母题示范",
+        "minutes": 8
+      },
+      {
+        "name": "分层变式与反馈",
+        "minutes": 12
+      },
+      {
+        "name": "出口检测与总结",
+        "minutes": 5
+      }
+    ]
+  }
+}

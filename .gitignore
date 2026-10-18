@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+outputs/
+output/
+tmp/
+_private/
+knowledge-base/
+!examples/knowledge-base/
+!examples/knowledge-base/**
+*.zip
+.DS_Store
+Thumbs.db
