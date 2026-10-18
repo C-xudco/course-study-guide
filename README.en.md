@@ -2,6 +2,8 @@
 
 [中文](README.md) · [Skill](skills/course-study-guide/SKILL.md)
 
+> **Doubao branch: `doubao/progressive-study-guide`.** See the [Doubao installation and usage guide (Chinese)](platforms/doubao/README.md), [native Skill](platforms/doubao/progressive-study-guide/SKILL.md) and [review notes](platforms/doubao/REVIEW.md). [Download this branch](https://github.com/C-xudco/course-study-guide/archive/refs/heads/doubao/progressive-study-guide.zip), then copy only `platforms/doubao/progressive-study-guide` into your actual Doubao Skill directory. Codex is not required. This branch starts from the original `main`; neither `main` nor the earlier online-research branch is changed. Instructions below still describe the original generic Skill. Doubao search, authenticated browsing and file export depend on available host tools; no end-to-end Doubao test is claimed.
+
 An open, source-grounded workflow for anyone learning a new subject and for K–12 teachers preparing lessons: intuition → concepts → canonical problems → purposeful variants → transfer and self-assessment.
 
 This repository contains an **AI assistant Skill**, templates and local helpers. It is not a standalone tutoring app. Skill instructions and most reference material are currently in Chinese; the assistant can produce materials in the requested language.

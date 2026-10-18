@@ -2,6 +2,10 @@
 
 [English](README.en.md) · [Skill 规范](skills/course-study-guide/SKILL.md) · [配置选项](skills/course-study-guide/references/options-and-modes.md)
 
+> **豆包使用分支 `doubao/progressive-study-guide`**：已审核修订用户在豆包创建的原生Skill。[豆包下载、安装与使用教程](platforms/doubao/README.md) · [豆包Skill](platforms/doubao/progressive-study-guide/SKILL.md) · [修订记录](platforms/doubao/REVIEW.md)。本分支从原版 `main` 独立建立，未修改 `main` 或此前联网分支；下面保留的原版说明适用于 `skills/course-study-guide`，豆包请按专用教程安装 `platforms/doubao/progressive-study-guide`。
+
+豆包版无需Codex：支持可调题量、上传母题、递进变式、学生/教师版与中英双语；增加可选联网找题和来源/额度记录。可[下载豆包分支ZIP](https://github.com/C-xudco/course-study-guide/archive/refs/heads/doubao/progressive-study-guide.zip)，解压后仅安装教程指明的Skill文件夹。联网、账号会话和PDF生成以豆包实际工具能力为准。
+
 给任何想系统学习新知识的人，也给需要备课的中小学教师：提供课程资料或一道母题，按“建立直觉 → 理解概念 → 掌握母题 → 练习变式 → 迁移与自查”生成学习材料。
 
 这是 **AI 助手使用的 Skill**：指令、模板与本地辅助工具，不是独立网站或无需模型的自动出题程序。公开项目不包含原作者的课程讲义、考试文件或私人笔记。

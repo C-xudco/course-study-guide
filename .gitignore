@@ -7,6 +7,9 @@ outputs/
 output/
 tmp/
 _private/
+research-private/
+research-usage*.json
+research-catalog*.json
 knowledge-base/
 !examples/knowledge-base/
 !examples/knowledge-base/**
