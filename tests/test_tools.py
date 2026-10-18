@@ -6,13 +6,14 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "skills/course-study-guide/scripts"
 sys.path.insert(0, str(SCRIPTS))
 from assess_questions import assess, report
 from question_plan import family_errors, resolve
-from sync_knowledge_base import affected, synchronize
+from sync_knowledge_base import affected, synchronize, is_link
 from validate_workbook import validate
 
 
@@ -115,6 +116,11 @@ class WorkbookTests(unittest.TestCase):
 
 
 class KnowledgeBaseTests(unittest.TestCase):
+    def test_windows_reparse_directory_is_skipped_without_is_junction(self):
+        with patch.object(Path, "is_symlink", return_value=False), patch.object(
+                Path, "lstat", return_value=SimpleNamespace(st_file_attributes=0x400)):
+            self.assertTrue(is_link(Path("junction")))
+
     def test_preview_apply_rename_modify_delete_restore(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "kb"

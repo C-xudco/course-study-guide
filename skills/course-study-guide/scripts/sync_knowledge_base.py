@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import stat
 import tempfile
 
 EXTENSIONS = {".pdf", ".ppt", ".pptx", ".doc", ".docx", ".txt", ".md", ".html", ".htm",
@@ -24,7 +25,9 @@ def digest(path):
 
 
 def is_link(path):
-    return path.is_symlink() or (hasattr(path, "is_junction") and path.is_junction())
+    # is_junction is not available on every supported Python version.
+    return path.is_symlink() or bool(getattr(path.lstat(), "st_file_attributes", 0)
+                                    & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400))
 
 
 def scan(root, omit):

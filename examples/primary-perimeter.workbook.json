@@ -147,8 +147,8 @@
               }
             ],
             "cognitive_processes": [
-              "understand",
-              "apply"
+              "remember",
+              "understand"
             ]
           }
         },
@@ -207,7 +207,6 @@
               }
             ],
             "cognitive_processes": [
-              "understand",
               "apply"
             ]
           }
@@ -343,8 +342,8 @@
               }
             ],
             "cognitive_processes": [
-              "analyze",
-              "evaluate"
+              "apply",
+              "analyze"
             ]
           },
           "mother_id": "U-PERIMETER-M1",
@@ -415,8 +414,8 @@
               }
             ],
             "cognitive_processes": [
-              "analyze",
-              "evaluate"
+              "apply",
+              "analyze"
             ]
           },
           "mother_id": "U-PERIMETER-M1",
