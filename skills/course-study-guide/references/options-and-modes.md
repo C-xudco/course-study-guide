@@ -49,3 +49,7 @@
 答题模板只在有帮助时开启：计算、证明、阅读理解、实验分析、案例论述等分别使用合适的推理骨架，并解释适用条件、可变部分和一个填写示范；不能用通用套话代替正确知识。
 
 可复制 [../assets/config.example.json](../assets/config.example.json) 并按自然语言需求修改。该配置是选项示例，不强制用户手动编辑 JSON。
+
+## 可选外部资料输入
+
+`online_research` 不是第四种教学模式，可与 learner/teacher/variants 任一模式组合。默认 `enabled:false`；用户明确要求联网时，根据其授权填写允许的精确站点域名、课程范围与预算。使用 [../assets/online-research.example.json](../assets/online-research.example.json) 的结构，不填写账号、密码或SSO令牌。登录授权、组题和额度流程见 [online-research.md](online-research.md)。

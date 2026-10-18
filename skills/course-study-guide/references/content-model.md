@@ -18,6 +18,8 @@
 
 `python scripts/assess_questions.py workbook.json --output assessment.json` 汇总题目评价；`python scripts/sync_knowledge_base.py --root knowledge-base --manifest outputs/knowledge-base.json --workbook workbook.json --apply` 更新本地索引并报告依赖影响。三个脚本仅使用 Python 标准库。
 
+开启联网模块时，可在 `sources` 扩展 `url`（无登录秘密的规范链接）、`access_status`、`source_class`、`usage_permission`、`retrieved_at` 和实际阅读范围。没有下载原件时，`file` 可指向本地来源台账文件，并通过来源ID定位；这不代表已经获取原文。仅有摘要或标题的项目归入待核验线索，不作为已读课程内容。现有校验器不核实网页身份、版权许可或登录状态，需要按联网模块流程实际核验。用量台账独立存储，不放入公开workbook。
+
 ## 通用字段约定
 
 `双语文本` 为 `{"zh":"中文完整内容", "en":"Equivalent English content"}`。单语时只保留配置语言的键。共享公式可嵌在两段中或作为单独扩展字段。字段可扩展；校验器不负责渲染。若用户指定其他语言，修改 `settings.languages`，所有本地化文本字段使用相同语言键。

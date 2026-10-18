@@ -2,6 +2,8 @@
 
 [中文](README.md) · [Skill](skills/course-study-guide/SKILL.md)
 
+> Feature branch: `feature/authorized-online-research`. This adds optional public/authorized study-material research with local quota reminders. The pre-update `main` branch remains unchanged. This feature has not been merged into `main`.
+
 An open, source-grounded workflow for anyone learning a new subject and for K–12 teachers preparing lessons: intuition → concepts → canonical problems → purposeful variants → transfer and self-assessment.
 
 This repository contains an **AI assistant Skill**, templates and local helpers. It is not a standalone tutoring app. Skill instructions and most reference material are currently in Chinese; the assistant can produce materials in the requested language.
@@ -17,6 +19,8 @@ This repository contains an **AI assistant Skill**, templates and local helpers.
 - Optional explanations, solutions, retrieval, mastery checks, glossary, answer scaffolds, assessments and mock exams.
 - Single-language or bilingual output; PDF, offline HTML and editable Markdown as supported by the host assistant.
 - Local knowledge-base change detection and dependency-aware revision on each invocation; no background daemon or automatic public uploads.
+- Optional research on permitted course sites, school LMSs, question banks and community sources, with access/provenance checks and source-based question selection.
+- Separate local budgets for searches, page reads, download attempts, site credits and costs; 80% reminders and stop-at-limit decisions. Unavailable account balances remain unknown.
 
 ## Install
 
@@ -24,10 +28,34 @@ Ask the built-in installer in a compatible Codex host:
 
 ```text
 Use $skill-installer to install skills/course-study-guide
-from https://github.com/C-xudco/course-study-guide.
+from C-xudco/course-study-guide with ref feature/authorized-online-research.
+Use this feature branch rather than main.
 ```
 
 Or copy that skill directory into your host's personal skills location. Current official Codex documentation lists `~/.agents/skills`; existing installations may expose `~/.codex/skills`. Follow your host's actual location. See [official Skills documentation](https://learn.chatgpt.com/docs/build-skills). Invoke `$course-study-guide` after installation; restart the host if discovery has not refreshed.
+
+[Download this feature branch as ZIP](https://github.com/C-xudco/course-study-guide/archive/refs/heads/feature/authorized-online-research.zip), or select the branch on GitHub and choose **Code → Download ZIP**. Switch to `main` to obtain the original version. See [GitHub's archive documentation](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives).
+
+## Authorized online research
+
+Read the [workflow](skills/course-study-guide/references/online-research.md), [configuration](skills/course-study-guide/assets/online-research.example.json) and [source catalog](skills/course-study-guide/assets/source-catalog-template.md). Online research is disabled by default.
+
+1. Provide the course/grade, institution, scope, years, target count and permitted starting sites. Prefer verified official course resources and released past papers; community posts are supplementary leads until checked.
+2. Approve exact domains and task budgets. Complete passwords, MFA, QR codes and campus SSO yourself in the site's normal login UI or an official connector. Do not send credentials, cookies or tokens to the assistant, config or repository.
+3. The assistant uses only tools actually available in the host. A web search tool does not inherit your personal browser session. Without authorized browser/connector support, use public sources or upload documents you legitimately export yourself.
+4. Distinguish full reading, partial preview, metadata-only and inaccessible leads. Classify sources, verify questions and solutions, respect permitted uses, and label originals/adaptations/new variants. Download access is not automatically redistribution permission.
+5. Check before actions and record observed use afterwards, including failed attempts and retries. Defaults: 10 searches, 20 page reads, 3 download attempts, zero money and zero paid credits. Warn at 80%; stop exhausted operations. Report actual website balances only when explicitly available, with evidence; local remaining budget is not an account balance.
+
+DeepSeek/Doubao users can paste the [research add-on prompt](skills/course-study-guide/assets/online-research-prompt.md) into their existing study role. This does not create browser permissions or account integrations. The module contains no private site API, crawler or universal SSO client, and has not been tested end to end using real campus/member accounts.
+
+Local preflight demo; no network requests:
+
+```text
+python skills/course-study-guide/scripts/quota_guard.py check --config examples/research.config.json --ledger outputs/research-usage-demo.json --domain courses.example.invalid --search-requests 1
+python skills/course-study-guide/scripts/quota_guard.py status --config examples/research.config.json --ledger outputs/research-usage-demo.json
+```
+
+After real actions the host must invoke `record` with observed use. Checks are read-only; records preserve unexpected overruns and return a stop decision. Credits are tracked per domain and costs in one explicit currency. The helper neither intercepts browser calls nor reads account balances; update each private ledger sequentially.
 
 ## Example prompts
 

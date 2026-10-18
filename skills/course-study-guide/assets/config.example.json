@@ -16,5 +16,17 @@
   "mock_count": 2,
   "modules": ["knowledge", "practice", "solutions", "retrieval", "mastery", "glossary", "answer_templates", "assessment_table"],
   "formats": ["pdf", "html"],
-  "knowledge_base": {"root": "./knowledge-base", "auto_sync": true}
+  "knowledge_base": {"root": "./knowledge-base", "auto_sync": true},
+  "online_research": {
+    "enabled": false,
+    "approved_domains": [],
+    "max_search_requests": 10,
+    "max_page_reads": 20,
+    "max_downloads": 3,
+    "max_model_tokens": null,
+    "site_credit_limits": {},
+    "max_cost": 0,
+    "currency": "CNY",
+    "warn_fraction": 0.8
+  }
 }

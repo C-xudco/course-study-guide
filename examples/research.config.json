@@ -1,0 +1,14 @@
+{
+  "online_research": {
+    "enabled": true,
+    "approved_domains": ["courses.example.invalid"],
+    "max_search_requests": 10,
+    "max_page_reads": 20,
+    "max_downloads": 3,
+    "max_model_tokens": null,
+    "site_credit_limits": {},
+    "max_cost": 0,
+    "currency": "CNY",
+    "warn_fraction": 0.8
+  }
+}

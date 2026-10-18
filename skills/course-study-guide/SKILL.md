@@ -1,6 +1,6 @@
 ---
 name: course-study-guide
-description: "Create progressive study guides and teacher lesson plans from a knowledge base, or generate assessed variants from uploaded mother problems. Use for 学案、备课、分层练习、母题变式 and course revision with configurable counts, language, templates and knowledge-base updates. Supports self-learners, university and K–12 teaching; not a generic document summary."
+description: "Create progressive study guides, teacher lesson plans and assessed mother-problem variants. Use for 学案、备课、组题 and course revision, optionally finding public or user-authorized study materials online with source tracking and quota reminders. Supports university and K–12 learning; not a generic web search or document summary."
 ---
 
 # 递进式学案与教师备课 / Progressive Study Guides
@@ -28,6 +28,16 @@ description: "Create progressive study guides and teacher lesson plans from a kn
 先读取 [references/source-workflow.md](references/source-workflow.md)。检查指定文件夹、用户新补充的文件和已有学案，排除生成输出与缓存，形成资料清单及覆盖映射。开启自主更新时按 [references/knowledge-base-updates.md](references/knowledge-base-updates.md) 扫描变化、维护来源 ID 与索引；这发生于每次调用，不是后台常驻服务。
 
 从用户消息、课程安排、考试说明中确定学习范围；区分考试核心、先修补充和范围外拓展。范围不明确时按已提供课程资料继续编写，标注“待确认”，不把所有文件都宣称为必考。只问会实质影响结果且无法推断的必要信息；不要等用户批准目录才开始工作。
+
+### 1a. 可选联网检索与授权资料组题
+
+仅在用户要求联网找题、校园课程资料、历年卷或外部复习材料时，读取 [references/online-research.md](references/online-research.md)。先确定课程/年级、范围、允许的网站和本次用量上限，再使用当前环境实际具备的搜索、连接器或浏览器能力。此模块默认关闭，不影响原有仅本地资料流程。
+
+校园账号、SSO、学科网等登录由使用者在网站正常登录界面完成；不索取或保存密码、验证码、令牌及Cookie。授权的已登录会话只用于指定课程资料，不扩展到个人学籍、成绩或其他系统。没有浏览器授权能力时，仅检索公开页面或整理用户导出的文件，不宣称已接入账户。
+
+按来源、年份、知识点、题型、难度和可信度整理检索结果；实际读到的内容与仅有摘要/标题的线索分开。保留题目出处与可用权限，依据教学目标组题，再接入母题、变式和答案核验流程。使用 [assets/source-catalog-template.md](assets/source-catalog-template.md) 建立来源表。
+
+每次搜索、读取与下载前检查预算，之后记录实际用量和失败重试。`scripts/quota_guard.py` 支持本地额度检查与80%提醒、触顶停止；它不接管浏览器、不登录网站、不读取真实账户余额。网站余额只有在当前授权界面或官方工具明确返回时才报告数值，其余标为未知。具体额度、付费点数及暂停规则见联网参考。
 
 ### 2. 规划教学路径
 
